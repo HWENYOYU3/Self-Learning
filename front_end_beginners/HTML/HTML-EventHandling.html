@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8">
+        <title>JavaScript Event Handling</title>
+
+        <style>
+            .buttonformat{
+                background-color:skyblue;
+                padding:10px; border-radius:5px;
+                cursor:pointer;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h3>事件處理的練習</h3>
+        <hr/>
+        <!--
+        <button onclick="console.log('點擊事件');"  
+                onmouseover="console.log('滑鼠移入')"
+                onmouseout="console.log('滑鼠移出')"
+                onmousedown="console.log('滑鼠按著')"
+                onmouseup="console.log('滑鼠放開')"> 按鈕  
+        </button>
+        -->
+        
+        <span  
+            class = 'buttonformat'
+            onmouseover="over(this)"
+            onmouseout="out(this)"
+            onmousedown="down(this)"
+            onmouseup="up(this)"   >
+            
+            點我
+        </span>
+
+        <script>
+            function over(elem){
+                elem.style.backgroundColor="#FFC8B4";
+            }
+            function out(elem){
+                elem.style.backgroundColor="skyblue";
+            }
+            function down(elem){
+                elem.style.fontWeight="bold";
+            }
+            function up(elem){
+                elem.style.fontWeight="normal";
+            }
+        </script>
+
+    </body>
+</html>

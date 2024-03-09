@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>JavaScript: HTML DOM 網頁實際實作練習</title>
+    </head>
+
+    <style>
+        .text{font-size:19px;font-weight:bold;};
+    </style>
+
+    <body>
+        <h3>這是一個標題</h3>
+        <hr/>   <!-- 底線 -->
+        <div id ="content">這是一段文字</div>
+        <!-- <button onclick = changewords();>按鈕</button> 當使用者點擊按鈕時，呼叫函式 --> 
+        <button onclick = changewords();>按鈕</button>
+
+        <script>
+            /*
+
+            // console.log(document.body); //先確定我們能抓到 body 標籤
+            //document.body.innerHTML="這是一段新的文字"; //將 body 內的文字替換成新的文字
+
+            //寫出在點擊按鈕時，網頁文字全部替換成新的文字
+            function changewords(){
+                document.body.innerHTML="這是一段新的文字";
+            }
+
+            */
+
+            function changewords(){
+                //取得標籤
+                let divElem = document.querySelector("#content");
+                console.log(divElem); //確認是否有抓到
+                //操作標籤物件
+                divElem.innerHTML = "更換特定一句文字";
+                divElem.className = "text";     // CSS Selector Class標籤
+                divElem.style.color = "red";    //針對單一CSS屬性
+
+            
+            }
+
+
+        </script>
+    </body>
+</html>

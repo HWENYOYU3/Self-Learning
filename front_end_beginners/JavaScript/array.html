@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>Javascript Object: Array</title>
+    </head>
+    <body>
+        <script>
+            //建立物件
+            let grades=[];
+            grades.push(70);
+            grades.push(90);
+            grades.push(60);
+            console.log(grades);
+            console.log(grades.length);
+            console.log(grades[2]);
+
+            //建立物件時放入資料
+            let height=[170,150,160];
+            console.log(height);
+            height.push(155);
+            console.log(height);
+            console.log(height.length);
+            console.log(height[0]);
+            //加入迴圈概念，逐一取出陣列中的資料
+            for(let i=0; i<height.length; i++){
+                console.log(i);
+                console.log(height[i]);
+            }
+        </script>
+    </body>
+</html>

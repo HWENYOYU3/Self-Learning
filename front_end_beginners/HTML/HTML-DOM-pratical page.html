@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>JavaScript: HTML DOM 網頁實際操作</title>
+    </head>
+
+    <body>
+        <div>
+            <span onclick= "aboutMe()">關於我是誰</span>
+            <span onclick= "aboutExp()">我的學經歷</span>
+        </div>
+
+        <hr/>  <!-- 底線 -->
+        <div id = "about">我叫蔡嘉文</div>
+        <div id = "exp" style = "display:none" >畢業於國立臺北大學</div>
+
+        <script>
+            function aboutMe(){
+                let aboutDiv = document.querySelector("#about");
+                let expDiv = document.querySelector("#exp");
+
+                aboutDiv.style.display ="block";
+                expDiv.style.display="none";
+            }
+
+            function aboutExp(){
+                let aboutDiv = document.querySelector("#about");
+                let expDiv = document.querySelector("#exp");
+
+                aboutDiv.style.display ="none";
+                expDiv.style.display="block";
+            }
+
+        </script>
+    </body>
+</html>

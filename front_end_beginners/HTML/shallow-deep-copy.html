@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>淺拷貝 Shallow Copy、深拷貝 Deep Copy</title>
+    </head>
+
+    <body>
+        <script>
+            // 淺拷貝 Shallow Copy 的觀察測試
+            let a=[0, 1, {x:2, y:3}];   //有兩層的物件結構
+            let b=[...a];               //進行淺拷貝，也可使用 Object.assign([],a);
+            //證明第一層的資料會被真正的拷貝
+            b[0]=10;
+            console.log(a[0]);      //不會影響，印出0
+            //證明第二層以及更多層的資料不會被真正的拷貝
+            b[2].x=5;
+            console.log(a[2].x);    //會影響，印出5
+            
+            //深拷貝 Deep Copy 的觀察測試
+            let c=[2, 3, {z:10, p:20}];
+            let str=JSON.stringify(c);  //先將物件結構字串化
+            let d=JSON.parse(str);        //再將字串化後的資料重新組合成新的物件結構
+            //完成深拷貝，所有層次的資料都會被真正的拷貝
+            //可簡寫成 let b=JSON.parse(JSON.stringify(a));
+            
+            //證明第二層的資料也會被真正的拷貝
+            d[2].z=33333;
+            console.log(c[2].z);    //不會影響，印出2
+            
+        </script>
+    </body>
+</html>

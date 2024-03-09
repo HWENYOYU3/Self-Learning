@@ -1,0 +1,20 @@
+ 
+/* ID selector*/
+#title{text-decoration: line-through}
+
+/* 標籤名稱 selector*/
+body{background-color:white}
+
+/* class selector */
+.title{
+    font-weight:bold;
+    font-size:24px;
+    margin-bottom:10px;
+    margin-top:10px
+}
+.content{
+    width:400px;
+    padding:10px;
+    border:1px dashed black
+}
+.keywords{color:red}

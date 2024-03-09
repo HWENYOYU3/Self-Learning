@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <meta charset="utf-8"/>
+        <title>Javascript flow control: loop-statement</title>   
+    </head>
+
+    <body>
+        <script>
+
+            /*
+            //break 指令
+            let n=0;
+            while(n<3){
+                if(n==2){
+                    break;      //強迫結束迴圈
+                }
+                console.log(n);
+                n++;
+            }
+            */
+
+            //continue 指令
+            for(let n=0; n<5; n++){
+                console.log("test");
+                continue;       //強迫回到迴圈的上方，忽略下面的指令，進行下一圈
+                console.log(n);
+            }
+
+            for(let m=0; m<10; m++){
+                if(m%2==0){     //如果m除以2的餘數為0(m為偶數)
+                    continue;   //強迫回到迴圈的上方，忽略下面的指令，進行下一圈
+                }
+                console.log(m);
+            }
+        </script>
+    </body>
+</html>

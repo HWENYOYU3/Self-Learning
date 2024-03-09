@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>Javascript flow control: function</title>
+    </head>
+
+    <body>
+        <script>
+            //建立函式
+            /*
+            function test(){
+                console.log("hello");
+                console.log("world");
+            }
+            //呼叫函式
+            test();
+            */
+
+            //印出任意的資料
+            /*
+            function show(msg){
+                console.log(msg);
+            }
+
+            show();
+            show("hello");
+            show(15);
+            */
+
+            //做除法
+            /*
+            function divide(n1,n2){
+                let result=n1/n2;
+                console.log(result);
+            }
+            divide(10,20);
+            divide(5,2.5);
+            divide("hello",4);          //印出結果 NaN = Not a Number
+            */
+
+            //做除法的另一種函式寫法
+            let divide=function(n1,n2){
+                let result=n1/n2;
+                console.log(result);
+            }
+            divide(2,5);
+        </script>
+    </body>
+</html>

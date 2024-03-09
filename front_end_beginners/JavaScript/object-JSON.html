@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>Javascrip flow control: Object</title>
+    </head>
+    <body>
+        <script>
+            /*
+            //建立物件
+            let man= new Object();  //建立空白物件
+            man.age=18;             //物件.成員名稱=資料
+            man.name="小明";
+            man.talk=function(){
+                //物件的方法中使用this, 代表物件本身
+                console.log("Hello, I'm", this.name, "my age is", this.age);
+            };
+            //使用物件
+            console.log(man);
+            console.log(man.age);   //物件.成員名稱
+            
+            console.log(man.name == "小明");
+            man.talk();             //呼叫函式; 呼叫物件的方法
+            */
+
+            //使用JSON語法
+            let man={}; //代表空白物件
+            console.log(man);
+            let woman={
+                age:18,
+                name:"Jenny",
+                talk:function(){
+                    console.log("hello, i'm", this.name, "my age is", this.age);
+                }
+            };
+            console.log(woman);
+            woman.talk();
+            console.log(woman.age>20);
+            
+
+
+        </script>
+    </body>
+</html>
